@@ -1,0 +1,92 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+/* Navbar Items */
+.navbar-item {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-item:hover {
+    color: #ffd700;
+    /* Change color on hover */
+}
+
+/* Navbar Left Section */
+.navbar-start .navbar-item {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-right: 20px;
+}
+
+/* Navbar Right Section */
+.navbar-end {
+    display: flex;
+    align-items: center;
+}
+
+/* Hide the toggle menu by default */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.navbar-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+
+    /* Show the hamburger menu icon */
+    .navbar-toggle {
+        display: flex;
+    }
+
+    /* Hide the navbar items on small screens initially */
+    .navbar-end {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    /* Show the navbar items when the menu is active */
+    .navbar-end.active {
+        display: flex;
+    }
+
+    /* Center-align the items in the dropdown */
+    .navbar-item {
+        padding: 10px;
+        margin: 5px 0;
+        text-align: center;
+        width: 100%;
+    }
+}
